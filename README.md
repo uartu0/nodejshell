@@ -13,7 +13,7 @@ Modo de uso:
 
 Depois disso você precisa só suprir algumas informações simples:
 
-- Nome do parâmetro que irá enviar a payload pelo *POST*.
+- Nome do parâmetro que irá enviar a payload pelo *POST*. (Somente necessário se o cookie não estiver já setado).
 - Nome do cookie que irá ativar a payload pelo *GET*.
 
 Feito isso, só ativar o seu **listener** preferido e esperar receber a conexão.

