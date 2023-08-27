@@ -1,4 +1,4 @@
-# NODEJSHELL - Exploit de reverseshell para desserialização em NodeJs (CVE-2017-5941)
+# NODEJSHELL - Exploit de reverse shell para desserialização em NodeJs (CVE-2017-5941)
 O exploit gera de forma automática o payload de reverse shell que é encodado em decimal e depois em base64.
 Depois disso esse payload é enviado através de uma requisição http POST que serializa o input do usuário e armazena em um cookie.
 Então conseguimos o RCE acessando através de uma requisição GET.
